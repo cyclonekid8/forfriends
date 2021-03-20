@@ -1,0 +1,13 @@
+
+
+{% extends "layout.html" %}
+
+{% block main %}
+    <form action="/buy" method="POST">
+        <input autocomplete="off" type="text" name="symbol" Placeholder="Enter Stock Symbol" />
+        <input autocomplete="off" type="text" name="shares" Placeholder="Enter number of shares" />
+        <button type="submit">Buy</button>
+    </form>
+
+
+{% endblock %}

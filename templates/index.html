@@ -1,0 +1,60 @@
+
+{% extends "layout.html" %}
+
+{% block main %}
+    <div>
+
+        <table style="width:1000px">
+            <thead>
+                <tr>
+                    <th>Asset Symbol</th>
+                    <th>Name</th>
+                    <th>Number of shares</th>
+                    <th>Price</th>
+                    <th>Total</th>
+                    <th>Time of transaction</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for row in rows %}
+                    <tr>
+                        {% for item in row %}
+
+                            <td>{{item}}</td>
+
+                        {% endfor %}
+                    </tr>
+                {% endfor %}
+                <tr style="border:solid">
+                    <td>Asset Value Total</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>{{ totalval }}</td>
+                    <td></td>
+                </tr>
+
+                <tr style="border:solid">
+                    <td>CASH</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>{{ CASH }}</td>
+                    <td></td>
+                </tr>
+
+                <tr style="border:solid">
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>TOTAL</td>
+                    <td>{{ TOTAL }}</td>
+                    <td></td>
+                </tr>
+
+            </tbody>
+        </table>
+    </div>
+
+
+{% endblock %}
